@@ -1,0 +1,87 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="tao-row">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view class="tao-row">
+    <van-slider value="{{ currentValue }}" min="0.5" max="12" step="0.5" use-button-slot bind:drag="onDrag">
+      <view class="custom-button" slot="button">
+        {{ currentValue }}
+      </view>
+    </van-slider>
+  </view>
+  <view class="tao-row">
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <van-button type="primary" icon="user-o" round custom-style="width: auto;" open-type="getPhoneNumber"
+          bindgetphonenumber="getUserMobile">
+          用户登录
+        </van-button>
+      </view>
+      <view style="width:20rpx;"></view>
+      <view class="weui-flex__item">
+        <van-button type="info" icon="phone-o" square custom-style="width: auto;" open-type="getPhoneNumber"
+          bindgetphonenumber="getUserMobile">
+          手机号码
+        </van-button>
+      </view>
+      <view style="width:20rpx;"></view>
+      <view class="weui-flex__item">
+        <van-button type="warning" plain icon="setting-o" round custom-style="width: auto;" bindtap="openSetting">
+          用户设置
+        </van-button>
+      </view>
+    </view>
+  </view>
+
+  <view class="tao-row">
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <van-button type="primary" size="small" icon="scan" round custom-style="width: auto;" bindtap="openScanCode">
+          扫一扫
+        </van-button>
+      </view>
+      <view style="width:20rpx;"></view>
+      <view class="weui-flex__item">
+        <van-button type="info" size="small" icon="location-o" custom-style="width: auto;" bindtap="openMapPage">
+          腾讯地图
+        </van-button>
+      </view>
+      <view style="width:20rpx;"></view>
+      <view class="weui-flex__item">
+        <van-button type="warning" size="small" icon="location-o" custom-style="width: auto;" bindtap="openH5Page">
+          h5页面
+        </van-button>
+      </view>
+    </view>
+  </view>
+
+  <view class="tao-row">
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <van-button type="primary" size="small" icon="photo-o" round custom-style="width: auto;" bindtap="cosUpload">
+          cos上传
+        </van-button>
+      </view>
+      <view style="width:20rpx;"></view>
+      <view class="weui-flex__item">
+        <van-button type="info" size="small" icon="location-o" custom-style="width: auto;" bindtap="openMapPage">
+          腾讯地图
+        </van-button>
+      </view>
+      <view style="width:20rpx;"></view>
+      <view class="weui-flex__item">
+        <van-button type="warning" size="small" icon="location-o" custom-style="width: auto;" bindtap="openH5Page">
+          h5页面
+        </van-button>
+      </view>
+    </view>
+  </view>
+</view>

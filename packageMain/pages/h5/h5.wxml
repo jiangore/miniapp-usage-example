@@ -1,0 +1,4 @@
+<!--pages/h5/h5.wxml-->
+<text>pages/h5/h5.wxml</text>
+<web-view src="https://demo.jiangore.com">
+</web-view>

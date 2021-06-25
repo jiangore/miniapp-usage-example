@@ -1,0 +1,50 @@
+<page-meta page-style="{{ pageStyle ? 'overflow: hidden;' : '' }}" />
+<van-nav-bar 
+  wx:if="{{ true }}"
+  title="标题" 
+  left-text="返回" 
+  left-arrow
+  border="{{ false }}"
+  fixed
+  placeholder
+  z-index="999"/>
+<view class="wrapper">
+  <view id="header" class="header"></view>
+  <view id="main" class="main">
+    <view 
+      class="dx-box {{ index % 2 == 0 ? 'bg-1' : 'bg-2' }}" 
+      wx:for="{{ 6 }}" 
+      wx:key="index"></view>
+  </view>
+  <view id="content" class="content" style="min-height: {{ contentMinHeight }}">
+    <van-sticky
+      offset-top="{{ offsetTop }}">
+      <van-dropdown-menu id="filter">
+        <van-dropdown-item 
+          id="item1"
+          value="{{ value1 }}" 
+          options="{{ option1 }}"
+          bind:change="change"
+          bind:open="openDropdown"
+          bind:opened="openedDropdown"
+          bind:close="closeDropdown"/>
+        <van-dropdown-item 
+          id="item2"
+          value="{{ value2 }}" 
+          options="{{ option2 }}" />
+      </van-dropdown-menu>
+      
+    </van-sticky>
+    <view style="height: 50rpx;"></view>
+    <van-button type="warning" block bind:click="topMenu">
+      dropdown-menu置顶
+    </van-button>
+    <view 
+      class="dx-box {{ index % 2 == 0 ? 'bg-1' : 'bg-2' }}" 
+      wx:for="{{ total }}" 
+      wx:key="index">{{ item }}</view>
+  </view>
+</view>
+
+
+

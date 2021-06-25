@@ -1,0 +1,12 @@
+
+npm_modules/@vant/weapp/lib/dropdown-item/index.js
+
+添加代码
+updateTop(top) {
+  let style = `index: 1000; top: ${top}px`
+  this.setData({
+    wrapperStyle: style
+  })
+}
+
+工具 -> 构建npm

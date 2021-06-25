@@ -1,0 +1,40 @@
+page {
+  background-color: #f9f9f9;
+}
+.wrapper {
+  width: 100%;
+}
+.wrapper .header {
+  height: 400rpx;
+  background-color: #ccc;
+}
+
+.main {
+  width: 700rpx;
+  padding: 0 25rpx;
+}
+.dx-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200rpx;
+}
+.dx-box.bg-1 {
+  background-color: #fff;
+}
+.dx-box.bg-2 {
+  background-color: #ddd;
+}
+
+#container {
+  margin-top: 50rpx;
+  height: 1000rpx;
+  border: 1px solid #f00;
+  text-align: center;
+}
+
+#scroller {
+  height: 1000rpx;
+  background-color: #fff;
+  display: none;
+}

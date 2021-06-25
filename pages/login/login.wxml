@@ -1,0 +1,60 @@
+<view class="wrapper">
+    <view class="nav">
+        nav
+    </view>
+    <view class="dx-search">
+        <view class="weui-flex search-flex">
+            <view class="avatar-box">
+                <view class="avatar">
+                    <open-data type="userAvatarUrl" />
+                </view>
+            </view>
+            <view class="weui-flex__item search-body">
+                <input class="search-input" type="text" focus="{{false}}" value="{{keyword}}" bindinput="searchKeyword"
+                    bindfocus="hideAllWindow" bindblur="hideSearchResult" placeholder="请输入目的地"
+                    placeholder-style="color:#999;" />
+            </view>
+            <view class="search-done" bindtap="startVoiceWin">
+                <mp-icon extClass="dx-mike" icon="mike" type="field" size="{{20}}" color="#777" />
+            </view>
+        </view>
+    </view>
+    <view class="dx-voice" 
+    style="display: {{dxVoiceDisplay}}" 
+    animation="{{voiceAnimation}}">
+        <view class="weui-flex voice-header">
+            <view class="">
+                <image class="robot" src="./icon/robot.png"/>
+            </view>
+            <view class="weui-flex__item"></view>
+            <view class="" bindtap="closeVoiceWin">
+                <mp-icon icon="close" color="#eee"/>
+            </view>
+        </view>
+        <view class="weui-flex voice-body">
+            <view class="weui-flex__item">
+                <view class="dx-wave">
+                    <view class="rect rect1"></view>
+                    <view class="rect rect2"></view>
+                    <view class="rect rect3"></view>
+                    <view class="rect rect4"></view>
+                    <view class="rect rect5"></view>
+                    <view class="rect rect6"></view>
+                </view>
+            </view>
+            <view class="weui-flex__item">
+                <view class="tip-txt">试试对我说</view>
+                <view class="destination">"苏州中心"</view>
+            </view>
+        </view>
+    </view>
+    <view class="header">
+        header
+    </view>
+    <view class="main">
+        main
+    </view>
+    <view class="footer">
+        footer
+    </view>
+</view>

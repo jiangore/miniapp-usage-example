@@ -1,0 +1,106 @@
+/* pages/map/index.wxss */
+
+.wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.map {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+
+.search-lay .dx-search {
+    position: absolute;
+    z-index: 99;
+    top: 100rpx;
+    width: 600rpx;
+    padding: 0 75rpx;
+}
+.search-flex {
+    height: 80rpx;
+    line-height: 80rpx;
+}
+.search-flex .avatar-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100rpx;
+    height: 80rpx;
+    border-top-left-radius: 15rpx;
+    border-bottom-left-radius: 15rpx;
+    text-align: center;
+    background-color: #fff;
+}
+.search-flex .avatar-box .avatar {
+    display: block;
+    overflow: hidden;
+    left: 20rpx;
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+}
+.search-flex .search-input {
+    padding: 0 10rpx;
+    height: 80rpx;
+    font-size: 36rpx;
+    background-color: #fff;
+}
+.search-flex .search-done {
+    width: 100rpx;
+    height: 80rpx;
+    text-align: center;
+    border-top-right-radius: 15rpx;
+    border-bottom-right-radius: 15rpx;
+    background-color: #fff;
+}
+.search-flex .search-done .dx-mike {
+    display: inline-block;
+    margin-top: -5rpx;
+}
+.search-lay .dx-voice {
+    position: absolute;
+    z-index: 100;
+    top: 200rpx;
+    left: 75rpx;
+    right: 75rpx;
+    border-radius: 20rpx;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.dx-voice .voice-header {
+    justify-content: center;
+    align-items: center;
+    padding: 0 20rpx;
+    height: 70rpx;
+    text-align: right;
+}
+.dx-voice .voice-header .robot {
+    display: block;
+    margin-top: 5rpx;
+    width: 60rpx; 
+    height: 60rpx; 
+}
+.dx-voice .voice-body {
+    padding: 10rpx 75rpx 50rpx 75rpx;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.dx-voice .voice-body .dx-wave > .rect {
+    background-color: #ddd;
+}
+.dx-voice .voice-body .tip-txt {
+    color: #ddd;
+    font-size: 28rpx;
+}
+.dx-voice .voice-body .destination {
+    color: #fff;
+    font-size: 36rpx;
+}

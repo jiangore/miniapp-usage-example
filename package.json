@@ -1,0 +1,19 @@
+{
+  "name": "test-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.6.1",
+    "dayjs": "^1.9.6",
+    "miniprogram-api-promise": "^1.0.4",
+    "wx-axios-promise": "^2.4.1",
+    "wx-qqmap-jssdk": "^1.2.0"
+  }
+}
